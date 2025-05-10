@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue операторымен басқару</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 800px; margin: 50px auto; text-align: left; }
+        h1 { text-align: center; }
+        p { font-size: 18px; }
+        code { 
+            background-color: #f4f4f4; 
+            padding: 10px; 
+            display: block; 
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Continue операторымен басқару</h1>
+        <p><b>Continue</b> операторы циклдың ағымдағы итерациясын өткізіп жіберіп, келесісіне өтуге мүмкіндік береді.</p>
+        
+        <h2>For цикліндегі мысал</h2>
+        <code>
+for x in range(1, 11):
+    if x % 2 == 0:
+        continue  # Жұп сандарды өткізіп жіберу
+    print("Тақ сан:", x)
+        </code>
+        <p>Нәтиже: 1, 3, 5, 7, 9 шығады.</p>
+
+        <h2>While цикліндегі мысал</h2>
+        <code>
+i = 0
+while i < 10:
+    i += 1
+    if i == 5:
+        continue  # 5-ті өткізіп жіберу
+    print("Сан:", i)
+        </code>
+        <p>Нәтиже: 1, 2, 3, 4, 6, 7, 8, 9, 10.</p>
+
+        <!-- Видео сілтемесі -->
+        <h2>Видеосабақ</h2>
+        <p>Continue операторын түсіну үшін мына видеоны қараңыз:</p>
+        <a href="https://youtu.be/mGwaZIbA2bM?si=opy3IoMFJxynySTz">📺 Видео сабақты қарау</a>
+
+        <!-- Тақырыптарға оралу -->
+        <br><br>
+        <a href="class8.html">🔙 8-сынып тақырыптарына оралу</a>
+    </div>
+</body>
+</html>
