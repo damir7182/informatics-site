@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файлдық функциялармен жұмыс</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 800px; margin: 50px auto; text-align: left; }
+        h1 { text-align: center; }
+        p { line-height: 1.6; }
+        a { text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Файлдық функциялармен жұмыс</h1>
+        <p>
+            Python-да файлдармен жұмыс істеуге арналған бірнеше пайдалы функциялар бар.
+            Олар файлдың мазмұнын оқу, жазу және өңдеу үшін қолданылады.
+        </p>
+        <h2>Негізгі файлдық функциялар</h2>
+        <ul>
+            <li><code>read()</code> – файлдың бүкіл мазмұнын оқу.</li>
+            <li><code>readline()</code> – файлдан бір жол оқу.</li>
+            <li><code>readlines()</code> – файлдағы барлық жолдарды тізім түрінде оқу.</li>
+            <li><code>write()</code> – файлға мәтін жазу.</li>
+            <li><code>writelines()</code> – файлға жолдар тізімін жазу.</li>
+            <li><code>seek()</code> – файлдағы көрсеткіштің орнын өзгерту.</li>
+            <li><code>tell()</code> – файлдағы көрсеткіштің ағымдағы орнын көрсету.</li>
+        </ul>
+        <h2>Мысалдар</h2>
+        <h3>Файлдан барлық деректерді оқу</h3>
+        <pre>
+<code>
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+</code>
+        </pre>
+        <h3>Файлдан жолдарды оқу</h3>
+        <pre>
+<code>
+with open("example.txt", "r") as file:
+    lines = file.readlines()
+    for line in lines:
+        print(line.strip())
+</code>
+        </pre>
+        <h3>Файлға жазу</h3>
+        <pre>
+<code>
+with open("example.txt", "w") as file:
+    file.write("Бұл жаңа мәтін файлы!")
+</code>
+        </pre>
+        <h2>Видео сабақ</h2>
+        <p><a href="https://youtu.be/0O4Dk1GML4s?si=63tzLxrIMqAE5IHn">Файлдық функциялармен жұмыс (видео)</a></p>
+        <br>
+        <a href="index.html">🔙 Басты бетке оралу</a>
+    </div>
+</body>
+</html>

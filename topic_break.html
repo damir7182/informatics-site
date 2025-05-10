@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break циклімен басқару</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .container { max-width: 800px; margin: 50px auto; text-align: left; }
+        h1 { text-align: center; }
+        p { font-size: 18px; }
+        code { 
+            background-color: #f4f4f4; 
+            padding: 10px; 
+            display: block; 
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Break циклімен басқару</h1>
+        <p><b>Break</b> операторы циклді мерзімінен бұрын аяқтау үшін қолданылады. Егер цикл ішінде белгілі бір шарт орындалса, break арқылы циклден шығып кетуге болады.</p>
+        <p>Python тіліндегі break операторының қолдану мысалы:</p>
+        <code>
+for x in range(1, 10):
+    if x == 5:
+        break
+    print("Сан:", x)
+        </code>
+        <p>Бұл код 1-ден 4-ке дейінгі сандарды шығарады, себебі x == 5 болғанда цикл тоқтайды.</p>
+        <h2>Break while циклінде</h2>
+        <p>Break while циклінде де қолданылады:</p>
+        <code>
+i = 1
+while i <= 10:
+    print("Сан:", i)
+    if i == 5:
+        break
+    i += 1
+        </code>
+        <p>Бұл код 1-ден 5-ке дейінгі сандарды шығарады, себебі i == 5 болғанда цикл аяқталады.</p>
+        <h2>Видеосабақ</h2>
+        <p>Төмендегі видеосабақтан break операторы туралы қосымша мәлімет ала аласыз:</p>
+        <a href="https://youtu.be/ah1ZyLXD8rU?si=xPLdEfe7xSv4r0Oc" target="_blank">📺 Мәліметтерді енгізу мен шығару (видео)</a>
+        <br>
+        <a href="class8.html">🔙 8-сынып тақырыптарына оралу</a>
+    </div>
+</body>
+</html>

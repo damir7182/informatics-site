@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информатика 6-9 сынып</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Информатика пәні</h1>
+        <p class="subtitle">Сыныпты таңдаңыз:</p>
+        <div class="button-group">
+            <button class="btn" onclick="selectClass(6)">📘 6 сынып</button>
+            <button class="btn" onclick="selectClass(7)">📗 7 сынып</button>
+            <button class="btn" onclick="selectClass(8)">📙 8 сынып</button>
+            <button class="btn" onclick="selectClass(9)">📕 9 сынып</button>
+        </div>
+        <a class="bot-link" href="https://t.me/PomoshnikPythonBot" target="_blank">🤖 Telegram-ботқа өту</a>
+    </div>
+
+    <script>
+        function selectClass(classNumber) {
+            window.location.href = `class${classNumber}.html`;
+        }
+    </script>
+</body>
+</html>
