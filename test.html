@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бірөлшемді массив тесті</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .question {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        .correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .wrong {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .back-btn {
+            background-color: #3498db;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Бірөлшемді массив тесті</h1>
+    
+    <div id="quiz">
+        <div class="question" id="q1">
+            <p>1. Бірөлшемді массив дегеніміз не?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q1" value="a"> а) Бір типті мәліметтердің тізбекті жиынтығы</div>
+                <div class="option"><input type="radio" name="q1" value="b"> ә) Әртүрлі типтегі мәліметтер жиынтығы</div>
+                <div class="option"><input type="radio" name="q1" value="c"> б) Екі өлшемді кесте</div>
+            </div>
+        </div>
+
+        <div class="question" id="q2">
+            <p>2. Python тілінде массив қалай жасалады?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q2" value="a"> а) array{1, 2, 3}</div>
+                <div class="option"><input type="radio" name="q2" value="b"> ә) [1, 2, 3]</div>
+                <div class="option"><input type="radio" name="q2" value="c"> б) (1, 2, 3)</div>
+            </div>
+        </div>
+
+        <div class="question" id="q3">
+            <p>3. arr = [10, 20, 30, 40] массивінде arr[2] қандай мәнге ие?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q3" value="a"> а) 10</div>
+                <div class="option"><input type="radio" name="q3" value="b"> ә) 20</div>
+                <div class="option"><input type="radio" name="q3" value="c"> б) 30</div>
+            </div>
+        </div>
+
+        <div class="question" id="q4">
+            <p>4. Массивке жаңа элемент қосу үшін қандай әдіс қолданылады?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q4" value="a"> а) add()</div>
+                <div class="option"><input type="radio" name="q4" value="b"> ә) append()</div>
+                <div class="option"><input type="radio" name="q4" value="c"> б) insert()</div>
+            </div>
+        </div>
+
+        <div class="question" id="q5">
+            <p>5. numbers = [1, 2, 3] массивіне 4 санын қосқанда қандай нәтиже шығады?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q5" value="a"> а) [1, 2, 3, 4]</div>
+                <div class="option"><input type="radio" name="q5" value="b"> ә) [4, 1, 2, 3]</div>
+                <div class="option"><input type="radio" name="q5" value="c"> б) [1, 2, 3]</div>
+            </div>
+        </div>
+
+        <div class="question" id="q6">
+            <p>6. Массивтен элементті жою үшін қандай әдіс қолданылады?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q6" value="a"> а) delete()</div>
+                <div class="option"><input type="radio" name="q6" value="b"> ә) remove()</div>
+                <div class="option"><input type="radio" name="q6" value="c"> б) erase()</div>
+            </div>
+        </div>
+
+        <div class="question" id="q7">
+            <p>7. len() функциясы массив үшін не істейді?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q7" value="a"> а) Массивті сорттайды</div>
+                <div class="option"><input type="radio" name="q7" value="b"> ә) Массив элементтерінің қосындысын есептейді</div>
+                <div class="option"><input type="radio" name="q7" value="c"> б) Массив ұзындығын қайтарады</div>
+            </div>
+        </div>
+
+        <div class="question" id="q8">
+            <p>8. arr = [5, 3, 8, 1] массивін сорттау үшін қандай әдіс қолданылады?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q8" value="a"> а) arr.sort()</div>
+                <div class="option"><input type="radio" name="q8" value="b"> ә) arr.order()</div>
+                <div class="option"><input type="radio" name="q8" value="c"> б) arr.range()</div>
+            </div>
+        </div>
+
+        <div class="question" id="q9">
+            <p>9. Массив элементтерін цикл арқылы қалай өңдеуге болады?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q9" value="a"> а) for i in range(arr):</div>
+                <div class="option"><input type="radio" name="q9" value="b"> ә) for element in arr:</div>
+                <div class="option"><input type="radio" name="q9" value="c"> б) while arr:</div>
+            </div>
+        </div>
+
+        <div class="question" id="q10">
+            <p>10. arr = [1, 2, 3] массивіне arr[1] = 4 операциясын орындағаннан кейін массив қалай өзгереді?</p>
+            <div class="options">
+                <div class="option"><input type="radio" name="q10" value="a"> а) [1, 4, 3]</div>
+                <div class="option"><input type="radio" name="q10" value="b"> ә) [4, 2, 3]</div>
+                <div class="option"><input type="radio" name="q10" value="c"> б) [1, 2, 3, 4]</div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <button onclick="checkAnswers()">Тестті аяқтау</button>
+        </div>
+    </div>
+
+    <div id="result"></div>
+
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="index.html" class="back-btn">Негізгі бетке оралу</a>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "a",
+            q2: "b",
+            q3: "c",
+            q4: "b",
+            q5: "a",
+            q6: "b",
+            q7: "b",
+            q8: "a",
+            q9: "b",
+            q10: "a"
+        };
+
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const questionName = "q" + i;
+                const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                
+                if (selectedOption) {
+                    if (selectedOption.value === correctAnswers[questionName]) {
+                        score++;
+                        document.getElementById(questionName).classList.add("correct");
+                    } else {
+                        document.getElementById(questionName).classList.add("wrong");
+                    }
+                }
+            }
+
+            const resultDiv = document.getElementById("result");
+            resultDiv.style.display = "block";
+            resultDiv.textContent = `Сіз ${score} дұрыс жауап бердіңіз (${totalQuestions} сұрақтан)`;
+            
+            if (score === totalQuestions) {
+                resultDiv.classList.add("correct");
+                resultDiv.textContent += " - Тамаша! Барлық жауаптар дұрыс!";
+            } else if (score >= totalQuestions / 2) {
+                resultDiv.classList.add("correct");
+                resultDiv.textContent += " - Жақсы нәтиже!";
+            } else {
+                resultDiv.classList.add("wrong");
+                resultDiv.textContent += " - Тақырыпты қайталаңыз.";
+            }
+
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
